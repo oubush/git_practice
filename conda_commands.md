@@ -1,5 +1,3 @@
-# conda_practice
-
 ## conda commands (from DataCamp class)
 
 Command | Description
