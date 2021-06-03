@@ -1,5 +1,7 @@
 ## pip commands
 
+pip installs packages from PyPI (Python Package Index)
+
 Command | Description
 --- | ---
 pip freeze | show all package versions installed
