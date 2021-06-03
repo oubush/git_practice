@@ -214,3 +214,17 @@ df.isna().sum()
 df.dropna()
 df.fillna(0)
 ```
+
+## Python Data Science Toolbox (Part 1)
+## Python Data Science Toolbox (Part 2)
+## Writing Efficient Python Code
+## Working with Dates and Times in Python
+## Regular Expressions in Python
+## Web Scraping in Python
+## Writing Functions in Python
+## Introduction to Shell
+## Parallel Programming with Dask in Python
+## Software Engineering for Data Scientists in Python
+## Developing Python Packages
+## Unit Testing for Data Science in Python
+## Object-Oriented Programming in Python
