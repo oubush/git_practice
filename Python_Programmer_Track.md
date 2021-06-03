@@ -134,3 +134,83 @@ from collections:
 - defaultdict 
 - OrderedDict
 - namedtuple
+
+## Data Manipulation with pandas
+
+- Exploring a DataFrame
+```
+df.head()
+df.info()
+df.shape
+df.describe()
+df.values
+df.columns
+df.index
+```
+- sorting
+```
+df.sort_values(by=..., ascending=True/False)
+```
+- summary statistics
+```
+df['col_name'].median()
+df['col_name'].mode()
+df['col_name'].min()
+df['col_name'].max()
+df['col_name'].var()
+df['col_name'].std()
+df['col_name'].sum()
+df['col_name'].quantile()
+df['col_name'].agg(func)
+```
+- cumulative statistics
+```
+df['col_name'].cumsum()
+df['col_name'].cummax()
+df['col_name'].cummin()
+df['col_name'].cumprod()
+```
+- duplicates
+```
+df.drop_duplicates(subset='col_name')
+```
+- counting, proportions
+```
+df.value_counts()
+df.value_counts(normalize=True)
+```
+- grouped summary statistics
+```
+df.groupby("col_name_1")["col_name_2"].mean()
+df.groupby("col_name_1")["col_name_2"].agg([min, max, sum])
+```
+- pivot tables
+```
+df.pivot_table(values="col_name_1", index="col_name_2")  # default: mean
+df.pivot_table(values="col_name_1", index="col_name_2", aggfunc=...)
+df.pivot_table(values="col_name_1", index="col_name_2", colums="col_name_3")
+df.pivot_table(values="col_name_1", index="col_name_2", colums="col_name_3", fill_value=0)  # filling missing values
+df.pivot_table(values="col_name_1", index="col_name_2", colums="col_name_3", fill_value=0, margins=True)  # summing
+```
+- slicing
+```
+df.columns
+df.index
+df = df.set_index('col_name')
+df.reset_index()
+df.reset_index(drop=True)
+df.sort_index()
+```
+- visualization
+```
+df.hist()
+df.plot(x='...', y='...', kind={'bar', 'line', 'scatter'}, title='...', rot=N)
+```
+- missing values
+```
+df.isna()
+df.isna().any()
+df.isna().sum()
+df.dropna()
+df.fillna(0)
+```
