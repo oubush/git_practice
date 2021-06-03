@@ -1,6 +1,6 @@
 ## pip commands
 
-pip installs packages from PyPI (Python Package Index)
+pip installs packages from [PyPI (Python Package Index)](http://pypi.org)
 
 Command | Description
 --- | ---
