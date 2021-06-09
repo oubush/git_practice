@@ -1,4 +1,5 @@
 # Jupyter Notebook
+__pycache__
 .ipynb_checkpoints
 
 # VS Code
