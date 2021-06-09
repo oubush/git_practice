@@ -3,5 +3,5 @@
 Create docstring templates in numpydoc formatting style  
 `pyment -w -o numpydoc module_name.py`
 
-Check style
+Check style  
 `flake8 module_name.py`
