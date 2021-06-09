@@ -6,5 +6,5 @@ Create docstring templates in numpydoc formatting style
 Check style  
 `flake8 module_name.py`
 
-Install pyment from GitHub
+Install pyment from GitHub  
 `pip install git+https://github.com/dadadel/pyment.git`
