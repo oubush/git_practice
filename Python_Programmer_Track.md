@@ -369,6 +369,56 @@ union(): all elements that are in either set
     - pandas `.apply()` method
     - use vectorization
 ## Working with Dates and Times in Python
+
+```
+from datetime import date
+```
+- Attributes of a date: `.year`, `.month`, `.day`, `.weekday()`
+- Weekdays in Python
+```
+0 = Monday
+1 = Tuesday
+2 = Wednesday
+...
+6 = Sunday
+```
+- Math with dates
+```
+from datetime import timedelta
+```
+- ISO format: YYYY-MM-DD
+```
+d.isoformat()  # Turning dates into ISO format
+```
+- Turning dates into strings: `strftime`
+```
+print(d.strftime("%Y/%m/%d"))
+2017/01/05
+```
+- Dates and Times
+```
+from datetime import datetime
+```
+```
+dt = datetime(year=2017, month=10, 
+day=1, hour=15, minute=23, second=25, 
+microsecond=500000)
+```
+- Replacing parts of a datetime
+```
+dt_hr = dt.replace(minute=0, second=0, microsecond=0)
+```
+- Printing datetimes
+```
+print(dt.strftime("%Y-%m-%d %H:%M:%S"))
+2017-12-30 15:19:13
+
+print(dt.strftime("%H:%M:%S on %d/%m/%Y"))
+15:19:13 on 2017/12/30
+
+print(dt.isoformat())
+2017-12-30T15:19:13  # ISO 8601 Format
+```
 ## Regular Expressions in Python
 ## Web Scraping in Python
 ## Writing Functions in Python
