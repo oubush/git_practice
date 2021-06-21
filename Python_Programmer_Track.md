@@ -216,7 +216,92 @@ df.fillna(0)
 ```
 
 ## Python Data Science Toolbox (Part 1)
+
+- user-defined functions
+```
+def func():
+    ...
+    return ...
+```
+- scopes searched: local / enclosing functions / global / built-in
+- default arguments
+- flexible arguments: `*args`
+- flexible key word arguments: `**kwargs`
+- Anonymous functions: `lambda x: x**2`
+- errors and exceptions
+```
+raise ValueError
+```
+
+```
+try:
+    ...
+except TypeError:
+    ...
+```
+
 ## Python Data Science Toolbox (Part 2)
+
+- Iterables: lists, strings, dictionaries, file connections
+- `iter()` method creates an iterator
+- Iterator produces next value with next()
+```
+word = 'Da'
+it = iter(word)
+next(it)
+'D'
+next(it)
+'a'
+```
+- Iterating at once with `*`
+- Iterating over file connections by lines
+- using `enumerate()`
+- using `zip()`
+- print zip with `*`
+- if too much data, load data in chunks
+```
+for chunk in pd.read_csv('data.csv', chunksize=1000):
+    ...
+```
+- list comprehensions:   
+`[output expression for iterator variable in iterable]`
+```
+new_nums = [num + 1 for num in nums]
+pairs_2 = [(num1, num2) for num1 in range(0, 2) for num2 in range(6, 8)]
+```
+- conditionals on the iterable
+```
+[num ** 2 for num in range(10) if num % 2 == 0]
+```
+- conditionals on the output expression
+```
+[num ** 2 if num % 2 == 0 else 0 for num in range(10)]
+```
+- advanced list comprehension
+```
+[output expression +
+conditional on output for iterator variable in iterable +
+conditional on iterable]
+```
+- dict comprehensions
+```
+pos_neg = {num: -num for num in range(9)}
+```
+- generator expressions: Use `( )` instead of `[ ]`
+```
+(2 * num for num in range(10))
+```
+- list comprehension returns a list, generator returns a generator object
+- generator functions: yields a sequence of values instead of returning a single value
+```
+def num_sequence(n):
+    """Generate values from 0 to n."""
+    i = 0
+    while i < n:
+        yield i
+        i += 1
+```
+
 ## Writing Efficient Python Code
 ## Working with Dates and Times in Python
 ## Regular Expressions in Python
