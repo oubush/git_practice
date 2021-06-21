@@ -303,6 +303,71 @@ def num_sequence(n):
 ```
 
 ## Writing Efficient Python Code
+
+- efficient: minimal completion time + minimal resource consumption
+- focus on readability
+- using Python's constructs as intended
+- The Python Standard Library: built-in types, built-in functions, built-in modules
+- `range()`, `enumerate()`, `map()`
+- NumPy arrays: broadcasting, boolean indexing
+
+- See all available magic commands with `%lsmagic`
+- Calculate runtime with IPython magic command `%timeit` (line magic)
+- Setting the number of runs(`-r`) and/or loops (`-n`)
+```
+%timeit -r2 -n10 ...
+```
+- cell magic: `%%timeit`
+- Saving the output to a variable (`-o`)
+```
+times = %timeit -o ...
+times.timings
+times.best
+times.worst
+```
+- code profiling: runtime (Detailed stats on frequency and duration of function calls)
+- Line-by-line analyses
+- Package used: `line_profiler` 
+```
+%load_ext line_profiler
+%lprun -f
+```
+- Code profiling: memory (Detailed stats on memory consumption)
+- Package used: `memory_profiler`
+```
+%load_ext memory_profiler
+%mprun -f
+```
+
+- `collections` module: Specialized container datatypes
+```
+namedtuple : tuple subclasses with named ,elds
+deque : list-like container with fast appends and pops
+Counter : dict for counting hashable objects
+OrderedDict : dict that retains order of entries
+defaultdict : dict that calls a factory function to supply missing values
+```
+- `itertools` module: Functional tools for creating and using iterators
+```
+Infinite iterators: count, cycle, repeat
+Finite iterators: accumulate, chain, zip_longest, etc.
+Combination generators: product, permutations, combinations
+```
+- `set` theory
+```
+intersection(): all elements that are in both sets
+difference(): all elements in one set but not the other
+symmetric_difference(): all elements in exactly one set
+union(): all elements that are in either set
+```
+- Fast membership testing: Using the `in` operator
+- eliminating loops: with built-ins, with built-in modules, with NumPy
+- Best practice for iterating over a pandas DataFrame:
+    - Iterating with `.iloc`
+    - Iterating with `.iterrows()`
+    - Iterating with `.itertuples()`
+    - pandas `.apply()` method
+    - use vectorization
 ## Working with Dates and Times in Python
 ## Regular Expressions in Python
 ## Web Scraping in Python
