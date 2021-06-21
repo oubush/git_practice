@@ -419,6 +419,96 @@ print(dt.strftime("%H:%M:%S on %d/%m/%Y"))
 print(dt.isoformat())
 2017-12-30T15:19:13  # ISO 8601 Format
 ```
+- Parsing datetimes with `strptime`
+```
+dt = datetime.strptime("12/30/2017 15:19:13",
+"%m/%d/%Y %H:%M:%S")
+```
+- Parsing datetimes with Pandas
+```
+# A timestamp
+ts = 1514665153.0
+# Convert to datetime and print
+print(datetime.fromtimestamp(ts))
+```
+- Working with durations
+```
+# Create example datetimes
+start = datetime(2017, 10, 8, 23, 46, 47)
+end = datetime(2017, 10, 9, 0, 10, 57)
+# Subtract datetimes to create a timedelta
+duration = end - start
+# Subtract datetimes to create a timedelta
+print(duration.total_seconds())
+```
+- Creating timedeltas
+```
+delta1 = timedelta(seconds=1)
+delta2 = timedelta(days=1, seconds=1)
+delta3 = timedelta(weeks=-1)
+```
+- UTC offset
+```
+# Import relevant classes
+from datetime import datetime, timedelta, timezone
+# US Eastern Standard time zone
+ET = timezone(timedelta(hours=-5))
+# Timezone-aware datetime
+dt = datetime(2017, 12, 30, 15, 9, 3, tzinfo = ET)
+print(dt)
+'2017-12-30 15:09:03-05:00'
+# India Standard time zone
+IST = timezone(timedelta(hours=5, minutes=30))
+# Convert to IST
+print(dt.astimezone(IST))
+'2017-12-31 01:39:03+05:30'
+```
+- Adjusting timezone vs changing tzinfo
+```
+print(dt)
+'2017-12-30 15:09:03-05:00'
+print(dt.replace(tzinfo=timezone.utc))
+'2017-12-30 15:09:03+00:00'
+# Change original to match UTC
+print(dt.astimezone(timezone.utc))
+'2017-12-30 20:09:03+00:00'
+```
+- Time zone database: Format: 'Continent/City'
+```
+from dateutil import tz
+# Eastern time
+et = tz.gettz('America/New_York')
+```
+- Loading datetimes with parse_dates
+```
+# Import W20529's rides in Q4 2017
+rides = pd.read_csv('capital-onebike.csv',
+parse_dates = ['Start date', 'End date'])
+# Or:
+rides['Start date'] = pd.to_datetime(rides['Start date'],
+format = "%Y-%m-%d %H:%M:%S")
+```
+- Summarizing data in Pandas
+```
+rides['Duration'].mean()
+rides['Duration'].sum()
+rides['Duration'].sum() / timedelta(days=91)
+rides['Duration seconds'] = rides['Duration'].dt.total_seconds()
+# Average duration by month
+rides.resample('M', on = 'Start date')['Duration seconds'].mean()
+# First ride per group
+rides.groupby('Member type').first()
+rides['Start date'].dt.year
+rides['Start date'].dt.weekday_name
+```
+- Timezones in Pandas
+```
+rides['Start date'].dt.tz_localize('America/New_York')
+
+# Handle ambiguous datetimes
+rides['Start date'] = rides['Start date'].dt.tz_localize('America/New_York', ambiguous='NaT')
+```
+
 ## Regular Expressions in Python
 ## Web Scraping in Python
 ## Writing Functions in Python
