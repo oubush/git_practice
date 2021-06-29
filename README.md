@@ -22,5 +22,5 @@ Connect to server with Jupyter
 `ssh -L 8899:localhost:8899 user@server`
 
 ssh using keys  
-client: `user/.ssh` contains `id_rsa` (private) and `id_rsa.pub`(public keys)
+client: `user/.ssh` contains `id_rsa` (private) and `id_rsa.pub`(public keys)  
 server: `.ssh` contains `authorized_keys` (you should insert here your public key)
