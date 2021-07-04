@@ -552,11 +552,11 @@ string.replace(old, new)
 str.format()
 # Specify data type to be used: {index:specifier}
 ```
-3. Formatted string literals (Add prefix `f` to string)
+2. Formatted string literals (Add prefix `f` to string)
 ```
 f'literal string {expression}'
 ```
-5. Template method
+3. Template method
 ```
 from string import Template
 my_string = Template('Data science has been called $identifier')
@@ -564,7 +564,7 @@ my_string.substitute(identifier="sexiest job of the 21st century")
 ```
 - f-strings are always advisable above all methods
 
-- REGar EXressions or regex: the `re` module
+- REGular EXpressions or regex: the `re` module
 ```
 import re
 re.findall(r'regex', string)  # Find all matches of a pattern
@@ -608,7 +608,7 @@ Character: `|`
 Set of characters: `[ ]`, example: `[a-zA-Z]`  
 `^` transforms the expression to negative: `[^ ]`, example `[^0-9]`
 
-- Greedy vs. non-greedy matching
+- Greedy vs. non-greedy matching  
 **Greedy**: match as many characters as possible  
 Return the longest match  
 Standard quantifiers are greedy by default: `*`, `+`, `?`, `{num, num}`  
