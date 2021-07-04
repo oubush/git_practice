@@ -621,7 +621,6 @@ Append `?` to greedy quantifiers
 
 ## Web Scraping in Python
 ## Writing Functions in Python
-## Introduction to Shell
 ## Parallel Programming with Dask in Python
 ## Software Engineering for Data Scientists in Python
 ## Developing Python Packages
