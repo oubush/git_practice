@@ -510,6 +510,115 @@ rides['Start date'] = rides['Start date'].dt.tz_localize('America/New_York', amb
 ```
 
 ## Regular Expressions in Python
+- Adjusting cases  
+```
+# Converting to lowercase
+my_string.lower()
+# Converting to uppercase
+my_string.upper()
+# Capitalizing the first character
+my_string.capitalize()
+```
+- Splitting
+```
+my_string.split()
+my_string.rsplit()
+my_string.splitlines()
+```
+- Joining
+```
+separator.join(itarable)
+```
+- Stripping characters
+```
+my_string.strip()
+my_string.rstrip()  # Remove characters from the right end
+my_string.lstrip()  # Remove characters from the left end
+```
+- Finding substrings
+```
+string.find(substring)  # Returns -1 if substring not found
+string.index(substring)  # Raises an exception if substring not found
+string.count(substring)
+```
+- Replacing substrings
+```
+string.replace(old, new)
+```
+- Methods for string formatting:  
+1. Positional formatting
+```
+'text {}'.format(value)
+str.format()
+# Specify data type to be used: {index:specifier}
+```
+3. Formatted string literals (Add prefix `f` to string)
+```
+f'literal string {expression}'
+```
+5. Template method
+```
+from string import Template
+my_string = Template('Data science has been called $identifier')
+my_string.substitute(identifier="sexiest job of the 21st century")
+```
+- f-strings are always advisable above all methods
+
+- REGar EXressions or regex: the `re` module
+```
+import re
+re.findall(r'regex', string)  # Find all matches of a pattern
+re.split(r'regex', string)  # Split string at each match
+re.sub(r'regex', new, string)  # Replace one or many matches with a string
+```
+- Supported metacharacters
+
+Metacharacter | Meaning
+--- | ---
+\d | Digit
+\D | Non-digit
+\w | Word
+\W | Non-word
+\s | Whitespace
+\S | Non-Whitespace
+
+- Quantifiers  
+Once or more: `+`  
+Zero times or more: `*`  
+Zero times or once: `?`  
+n times at least, m times at most : `{n, m}`  
+
+- Immediately to the left  
+`r"apple+"` : `+` applies to `e` and not to `apple`
+
+- Looking for patterns
+```
+re.search(r'regex', string)
+re.match(r'regex', string)
+```
+
+- Special characters  
+Match any character (except newline): `.`  
+Start of the string: `^`  
+End of the string: `$`  
+Escape special characters: `\`  
+
+- OR operator  
+Character: `|`  
+Set of characters: `[ ]`, example: `[a-zA-Z]`  
+`^` transforms the expression to negative: `[^ ]`, example `[^0-9]`
+
+- Greedy vs. non-greedy matching
+**Greedy**: match as many characters as possible  
+Return the longest match  
+Standard quantifiers are greedy by default: `*`, `+`, `?`, `{num, num}`  
+
+**Lazy**: match as few characters as needed*  
+Returns the shortest match  
+Append `?` to greedy quantifiers
+
+- Advanced: grouping, capturing, altrnation. backreferences, lookaround
+
 ## Web Scraping in Python
 ## Writing Functions in Python
 ## Introduction to Shell
