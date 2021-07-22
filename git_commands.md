@@ -76,3 +76,9 @@
 `git pull remote-name branch-name` - get changes from branch-name (ex. master) in the repository associated with the remote-name (ex. origin) and merge them into your branch
 
 `git push remote-name branch-name` - push the contents of branch-name in the remote-name
+
+`git branch -d branch_name` - delete local branch that is merged
+
+`git branch -D branch_name` - force delete of a local branch
+
+`git fetch -p` - update branch list and delete non-existing references
