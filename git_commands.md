@@ -82,3 +82,5 @@
 `git branch -D branch_name` - force delete of a local branch
 
 `git fetch -p` - update branch list and delete non-existing references
+
+`git switch branch_name` - If branch_name exists on the remote repository, but not on your local branch (automatically set up remote branch tracking)

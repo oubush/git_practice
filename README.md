@@ -9,6 +9,9 @@ Check style
 Install pyment from GitHub  
 `pip install git+https://github.com/dadadel/pyment.git`  
 
+Create `requirements.txt`  
+`pip list --format=freeze > requirements.txt`
+
 Create tmux session  
 `tmux new-session -s NAME`
 
