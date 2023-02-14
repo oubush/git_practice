@@ -28,3 +28,21 @@
 `docker exec <контейнер> команда` — запустить команду в работающем контейнер ([ссылка](https://docs.docker.com/engine/reference/commandline/exec/))
 
 - `docker exec -it <контейнер> bash` — запустить bash процесс и «войти» в контейнер ([ссылка](https://docs.docker.com/engine/reference/commandline/exec/#run-docker-exec-on-a-running-container))
+
+## Инструкции Dockerfile'а
+
+FROM — задаем базовый образ, на основе которого собираем новый ([ссылка](https://docs.docker.com/engine/reference/builder/#from))
+
+COPY — копируем файл с нашей файловой системы в файловую систему контейнеров ([ссылка](https://docs.docker.com/engine/reference/builder/#copy))
+
+ADD — добавляем файл или ссылку с нашей файловой системы в образ ([ссылка](https://docs.docker.com/engine/reference/builder/#add))
+
+RUN — выполняем команду ([ссылка](https://docs.docker.com/engine/reference/builder/#run))
+
+WORKDIR — устанавливаем рабочую директорию ([ссылка](https://docs.docker.com/engine/reference/builder/#workdir))
+
+ENTRYPOINT — задаем точку входа для запуска контейнера ([ссылка](https://docs.docker.com/engine/reference/builder/#entrypoint))
+
+CMD — задаем точку входа для запуска контейнера ([ссылка](https://docs.docker.com/engine/reference/builder/#cmd))
+
+Со списком инструкций можно ознакомиться в документации ([ссылка](https://docs.docker.com/engine/reference/builder/)).
