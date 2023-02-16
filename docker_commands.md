@@ -51,8 +51,8 @@
 
 `docker cp <путь на хосте> <название контейнера>:<путь в контейнере>` - скопировать файл или папку с хоста в контейнер
 
-Ссылки:
-[Volume](https://docs.docker.com/storage/volumes/)
+Ссылки:  
+[Volume](https://docs.docker.com/storage/volumes/)  
 [Bind mount](https://docs.docker.com/storage/bind-mounts/)
 
 `docker volume ls` — вывести список вольюмов ([ссылка](https://docs.docker.com/engine/reference/commandline/volume_ls/))
