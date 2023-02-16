@@ -46,3 +46,30 @@
 `CMD` — задаем точку входа для запуска контейнера ([ссылка](https://docs.docker.com/engine/reference/builder/#cmd))
 
 Со списком инструкций можно ознакомиться в документации ([ссылка](https://docs.docker.com/engine/reference/builder/)).
+
+## Синхронизация файлов
+
+`docker cp <путь на хосте> <название контейнера>:<путь в контейнере>` - скопировать файл или папку с хоста в контейнер
+
+Ссылки:
+[Volume](https://docs.docker.com/storage/volumes/)
+[Bind mount](https://docs.docker.com/storage/bind-mounts/)
+
+`docker volume ls` — вывести список вольюмов ([ссылка](https://docs.docker.com/engine/reference/commandline/volume_ls/))
+
+`docker volume create <название>` — создать вольюм ([ссылка](https://docs.docker.com/engine/reference/commandline/volume_create/))
+
+`docker volume rm <название>` — удалить вольюм ([ссылка](https://docs.docker.com/engine/reference/commandline/volume_rm/))
+
+`docker volume prune` — удалить вольюмы, которые не используются контейнерами ([ссылка](https://docs.docker.com/engine/reference/commandline/volume_prune/))
+
+`docker volume inspect <название>`
+
+### Bind mount:
+`docker run -v <полный_путь_на_хосте>:<полный_путь_в_контейнере> <образ>`
+
+### Volume:
+`docker run -v <название_вольюма>:<полный_путь_в_контейнере> <образ>`
+
+### Readonly режим
+`docker run -v <полный_путь_на_хосте>:<полный_путь_в_контейнере>:ro <образ>`
