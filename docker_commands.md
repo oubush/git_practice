@@ -83,3 +83,13 @@
 `docker run -e <НАЗВАНИЕ_ПЕРЕМЕННОЙ>=<значение> <образ>` — позволяет задать переменную окружения в конкретном контейнере ([ссылка](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file)).
 
 `docker run --env-file <НАЗВАНИЕ_ФАЙЛА_С_ПЕРЕМЕННЫМИ> <образ>` — позволяет задать переменные окружения в конкретном контейнере из файла ([ссылка](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file)).
+
+## Логи
+
+`docker logs <контейнер>` — позволяет вытащить логи из контейнера ([ссылка](https://docs.docker.com/engine/reference/commandline/logs/))
+
+- `docker logs -f <контейнер>` — не отключаемся от контейнера
+
+- `docker logs -t <контейнер>` — добавляем время к логам
+
+Еще можно заглянуть [сюда](https://docs.docker.com/config/containers/logging/).
