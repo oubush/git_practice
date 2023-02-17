@@ -73,3 +73,13 @@
 
 ### Readonly режим
 `docker run -v <полный_путь_на_хосте>:<полный_путь_в_контейнере>:ro <образ>`
+
+## Переменные окружения
+
+`ENV` — инструкция в Dockerfile, которая позволяет задавать переменные окружения в контейнерах ([ссылка](https://docs.docker.com/engine/reference/builder/#env)).
+
+      * Не задавайте через эту инструкцию секретные данные
+
+`docker run -e <НАЗВАНИЕ_ПЕРЕМЕННОЙ>=<значение> <образ>` — позволяет задать переменную окружения в конкретном контейнере ([ссылка](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file)).
+
+`docker run --env-file <НАЗВАНИЕ_ФАЙЛА_С_ПЕРЕМЕННЫМИ> <образ>` — позволяет задать переменные окружения в конкретном контейнере из файла ([ссылка](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file)).
