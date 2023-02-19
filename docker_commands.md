@@ -92,7 +92,7 @@
 
 - `docker logs -t <контейнер>` — добавляем время к логам
 
-Еще можно заглянуть [сюда](https://docs.docker.com/config/containers/logging/).
+Ссылка: [View container logs](https://docs.docker.com/config/containers/logging/).
 
 ## Порты
 
@@ -116,4 +116,4 @@
 
 `docker network connect <название_сети> <название_контейнера>` - подключение контейнера к сети
 
-[Сети](https://docs.docker.com/network/).
+Ссылка: [Network overview](https://docs.docker.com/network/).
