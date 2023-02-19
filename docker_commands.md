@@ -101,3 +101,19 @@
 `docker run -p <порт_на_хосте>:<порт_в_контейнере> <образ>` — связывает порт внутри контейнера с портом на хосте ([ссылка](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose)).
 
 `docker run -p <IP_адрес_на_хосте>:<порт_на_хосте>:<порт_в_контейнере> <образ>` — по умолчанию адрес на хосте задается 0.0.0.0. При поднятии можно изменить этот адрес. Например: `docker run -p 127.0.0.1:80:80 nginx`
+
+## Сети
+
+`docker network ls` — список сетей ([ссылка](https://docs.docker.com/engine/reference/commandline/network_ls/))
+
+`docker network create <название_сети>` — создать сеть ([ссылка](https://docs.docker.com/engine/reference/commandline/network_create/))
+
+`docker network rm <название_сети>` — удалить сеть ([ссылка](https://docs.docker.com/engine/reference/commandline/network_rm/))
+
+`docker run --net=<название_сети> <образ>` — подключаем контейнер к сети ([ссылка](https://docs.docker.com/engine/reference/commandline/run/#connect-a-container-to-a-network---network), [ссылка](https://docs.docker.com/engine/reference/run/#network-settings))
+
+`docker inspect <название_или_ID_объекта>` — получить информацию об объектах докера (контейнер, образ, вольюм, сеть) ([ссылка](https://docs.docker.com/engine/reference/commandline/inspect/))
+
+`docker network connect <название_сети> <название_контейнера>` - подключение контейнера к сети
+
+[Сети](https://docs.docker.com/network/).
