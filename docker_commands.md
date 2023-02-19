@@ -116,4 +116,4 @@
 
 `docker network connect <название_сети> <название_контейнера>` - подключение контейнера к сети
 
-Ссылка: [Network overview](https://docs.docker.com/network/).
+Ссылка: [Networking overview](https://docs.docker.com/network/)
