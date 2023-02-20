@@ -3,6 +3,8 @@
 
 `docker rmi <образ> [образ...]` или `docker image rm <образ> [образ...]` — удалить образ(ы) ([ссылка](https://docs.docker.com/engine/reference/commandline/rmi/), [ссылка](https://docs.docker.com/engine/reference/commandline/image_rm/))
 
+`docker pull <образ>:<тэг>`
+
 ## Работа с контейнерами
 
 `docker run <образ>` — поднять контейнер на основе образа ([ссылка](https://docs.docker.com/engine/reference/commandline/run/))
@@ -25,9 +27,11 @@
 
 `docker rm <контейнер> [контейнер...]` — удалить контейнер(ы) ([ссылка](https://docs.docker.com/engine/reference/commandline/rm/))
 
-`docker exec <контейнер> команда` — запустить команду в работающем контейнер ([ссылка](https://docs.docker.com/engine/reference/commandline/exec/))
+`docker exec <контейнер> команда` — запустить команду в работающем контейнере ([ссылка](https://docs.docker.com/engine/reference/commandline/exec/))
 
 - `docker exec -it <контейнер> bash` — запустить bash процесс и «войти» в контейнер ([ссылка](https://docs.docker.com/engine/reference/commandline/exec/#run-docker-exec-on-a-running-container))
+
+`docker system df`
 
 ## Инструкции Dockerfile'а
 
@@ -47,9 +51,14 @@
 
 Со списком инструкций можно ознакомиться в документации ([ссылка](https://docs.docker.com/engine/reference/builder/)).
 
+`docker build -t <новое_имя_образа> <директория_с_контекстом>`
+
+`docker commit <контейнер> <новое_имя_образа>:<тэг>`
+
 ## Синхронизация файлов
 
-`docker cp <путь на хосте> <название контейнера>:<путь в контейнере>` - скопировать файл или папку с хоста в контейнер
+`docker cp <путь на хосте> <название контейнера>:<путь в контейнере>` - скопировать файл или папку с хоста в контейнер  
+`docker cp <название контейнера>:<путь в контейнере> <путь на хосте>` - скопировать файл или папку с контейнера на хост
 
 Ссылки:  
 [Volume](https://docs.docker.com/storage/volumes/)  
