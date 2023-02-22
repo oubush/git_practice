@@ -126,3 +126,20 @@
 `docker network connect <название_сети> <название_контейнера>` - подключение контейнера к сети
 
 Ссылка: [Networking overview](https://docs.docker.com/network/)
+
+## Многоэтапная сборка
+
+Ссылка: [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
+
+Этапы задаются при помощи нескольких инструкций `FROM`.
+
+Из одного этапа сборки в другой можно копировать артефакты при помощи `COPY --from=`.
+```
+FROM <образ> AS builder
+. . .
+
+
+FROM <образ> 
+. . .
+COPY --from=builder <путь_в_сборке_builder> <путь_в_текущей_сборке>
+```
