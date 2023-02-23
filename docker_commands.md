@@ -143,3 +143,22 @@ FROM <образ>
 . . .
 COPY --from=builder <путь_в_сборке_builder> <путь_в_текущей_сборке>
 ```
+
+## Команды docker-compose
+
+`docker-compose ps` — список контейнеров ([ссылка](https://docs.docker.com/engine/reference/commandline/compose_ps/))
+
+`docker-compose up` — поднять приложение ([ссылка](https://docs.docker.com/engine/reference/commandline/compose_up/))
+
+- `docker-compose up <сервис>` — поднять конкретный контейнер
+
+- `docker-compose up -d` — поднять контейнеры в фоновом режиме
+
+- `docker-compose -f docker-compose.dev.yml up` — указать `docker-compose.yaml` файл ([ссылка](https://docs.docker.com/compose/reference/#use--f-to-specify-name-and-path-of-one-or-more-compose-files))
+
+`docker-compose stop` — остановить поднятые контейнеры ([ссылка](https://docs.docker.com/engine/reference/commandline/compose_stop/))
+
+`docker-compose start` — запустить остановленные контейнеры ([ссылка](https://docs.docker.com/engine/reference/commandline/compose_stop/))
+
+`docker-compose down` — остановить и удалить контейнеры и сеть  ([ссылка]https://docs.docker.com/engine/reference/commandline/compose_down/))
+
