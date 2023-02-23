@@ -162,3 +162,28 @@ COPY --from=builder <путь_в_сборке_builder> <путь_в_текуще
 
 `docker-compose down` — остановить и удалить контейнеры и сеть  ([ссылка]https://docs.docker.com/engine/reference/commandline/compose_down/))
 
+## Инструкции docker-compose.yaml 
+
+Ссылка: [Compose file specification](https://docs.docker.com/compose/compose-file/)
+
+`build` — собираем образ, на основе которого поднимем сервис ([ссылка](https://docs.docker.com/compose/compose-file/#build))
+
+`image` — образ, на основе которого поднимем сервис ([ссылка](https://docs.docker.com/compose/compose-file/#image))
+
+`container_name` — название контейнера в сервисе ([ссылка](https://docs.docker.com/compose/compose-file/#container_name))
+
+`volumes` — список вольюмов для сервиса ([ссылка](https://docs.docker.com/compose/compose-file/#volumes))
+
+`environment` — переменные окружения в сервисе ([ссылка](https://docs.docker.com/compose/compose-file/#environment))
+
+`networks` — список сетей, к которым нужно подуключить сервис ([ссылка](https://docs.docker.com/compose/compose-file/#networks))
+
+`ports` — список портов, которые нужно прокинуть у сервиса ([ссылка](https://docs.docker.com/compose/compose-file/#ports))
+
+`restart` — указываем поведение сервиса при падении ([ссылка]())
+
+`deploy/replicas` — указываем количество контейнеров у сервиса ([ссылка](https://docs.docker.com/compose/compose-file/#deploy), [ссылка](https://docs.docker.com/compose/compose-file/deploy/#replicas))
+
+`depends_on` — определяем зависимость между сервисами ([ссылка](https://docs.docker.com/compose/compose-file/#depends_on))
+
+`healthcheck` — задаем проверку для сервиса ([ссылка](https://docs.docker.com/compose/compose-file/#healthcheck))
