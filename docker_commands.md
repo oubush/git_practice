@@ -160,7 +160,7 @@ COPY --from=builder <путь_в_сборке_builder> <путь_в_текуще
 
 `docker-compose start` — запустить остановленные контейнеры ([ссылка](https://docs.docker.com/engine/reference/commandline/compose_stop/))
 
-`docker-compose down` — остановить и удалить контейнеры и сеть  ([ссылка]https://docs.docker.com/engine/reference/commandline/compose_down/))
+`docker-compose down` — остановить и удалить контейнеры и сеть  ([ссылка](https://docs.docker.com/engine/reference/commandline/compose_down/))
 
 ## Инструкции docker-compose.yaml 
 
