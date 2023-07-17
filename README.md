@@ -27,3 +27,6 @@ Connect to server with Jupyter
 ssh using keys  
 client: `user/.ssh/` contains `id_rsa` (private) and `id_rsa.pub`(public keys)  
 server: `.ssh/` contains `authorized_keys` (you should insert here your public key)
+
+import logging
+logging.basicConfig(format="%(asctime)s %(message)s", level=logging.DEBUG)
